@@ -1,0 +1,1103 @@
+@font-face {
+    font-family: "monument";
+    src: url("../Font/MonumentExtended-Regular.otf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "monument";
+    src: url("../Font/MonumentExtended-Ultrabold.otf");
+    font-weight: 700;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::selection{
+    color: yellowgreen;
+    background-color: black;
+}
+
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --darkgrey: darkgrey;
+    --grey: grey;
+    --blue: #1B68D9;
+    --dividered-MarginTop: 12px;
+}
+
+.preloader{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 99999;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(15px);
+    color: white;
+}
+
+.preloader h1{
+    font-size: 100px;
+    font-family: "monument";
+    font-weight: 400;
+}
+
+.header, .section1, .heading, .section2, .section3, .section4, .section5, .section6, .section7, .section8, .faq, .blog{
+    position: relative;
+    z-index: 1;
+}
+
+
+.topbtn{
+    text-decoration: none;
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    color: #cda45e;
+    font-size: 20px;
+    transform: rotate(90deg);
+    z-index: 9;
+    display: none;
+    mix-blend-mode: exclusion;
+}
+
+.topbtn:hover{
+    color: darkslategrey;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.anchor{
+    color: var(--blue);
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.anchor:hover{
+    letter-spacing: 10px;
+    color: var(--grey);
+}
+
+.blue{
+    color: var(--blue);
+}
+
+.grey{
+    color: var(--grey);
+}
+
+.heading{
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.heading a{
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px grey;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.heading a::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: var(--grey);
+    font-weight: 500;
+    letter-spacing: 40px;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.heading a:hover::before{
+    opacity: 1;
+    letter-spacing: 6px;
+}
+.heading a:hover{
+    text-shadow: 1px 1px 2px grey;
+}
+
+/* ========================================== header starts here ========================================== */
+
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .head{
+    width: 10%;
+}
+
+.header form button{
+    color: var(--white);
+    padding: 10px 30px !important;
+    border: 1px solid white;
+}
+
+.header form button:hover{
+    color: var(--white);
+    background-color: var(--blue);
+
+}
+
+.navbar-toggler-icon{
+    font-size: 40px;
+    color: var(--white);
+    display: inline-block;
+    background-image: none;
+}
+
+.navbar-toggler{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: none !important;
+}
+
+.navbar-nav a{
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.navbar-nav a:hover{
+    color: var(--grey);
+}
+
+.btn-close:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.offcanvas{
+    background: rgb(29,29,66);
+}
+
+.scrolled{
+    background: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    transition: 1s;
+}
+
+.scrolled .navbar-nav a{
+    color: #000000;
+    transition: 0.5s;
+}
+.scrolled .navbar-nav a:hover{
+    color: var(--blue);
+    transition: 0.8s;
+}
+
+.scrolled form button{
+    background-color: var(--blue);
+    border: none;
+    transition: 0.4s;
+}
+.scrolled form button:hover{
+    background-color: rgb(142, 57, 221);
+}
+
+.scrolled .navbar-toggler-icon{
+    color: var(--black);
+}
+
+/* ========================================== section1 starts here ========================================== */
+
+.section1{
+    background-image: linear-gradient(rgba(0,0,0,0.1),#131112), url(../images/hero\ bg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.section1 .first{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.section1 .inside1{
+    padding: 70px 0 0 0;
+}
+
+.section1 .inside1 h1{
+    font-size: 1.8rem;
+    font-family: 'Trispace', sans-serif;
+    font-weight: 300;
+}
+
+.section1 .inside1 h2{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.section1 .inside1 h2 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--grey);
+    font-weight: 900;
+}
+
+.section1 .inside1 p{
+    font-size: 15px;
+    line-height: 25x;
+    padding: 0 0 35px 0;
+}
+
+.section1 .inside1 a{
+    padding: 15px 30px;
+    border-radius: 8px;
+    background-color: var(--blue);
+    transition: 0.3s;
+    color: white;
+    font-weight: 600;
+}
+
+.section1 .inside1 a:hover{
+    background-color: rgb(142, 57, 221);
+}
+
+.section1 .inside2 img{
+    width: 125%;
+    margin: -50px 0 0 -50px;
+    animation: anim1 5s linear 0s infinite alternate-reverse;
+}
+
+@keyframes anim1 {
+
+    0%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+    
+}
+
+/* ====================================================== Section 2 starts here ============================================= */
+
+.section2 .inside1 img{
+    width: 80%;
+}
+
+.section2 .inside2{
+    display: grid;
+    place-items: center;
+}
+
+.section2 .inside2 span{
+    color: #1B68D9;
+    font-family: 'Trispace', sans-serif;
+}
+
+.section2 .inside2 h4{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.section2 .inside2 p{
+    color: var(--grey);
+}
+
+.section2 .data2 h5{
+    color: var(--blue);
+}
+
+/* ========================================== addon starts here ========================================== */
+.addon2{
+    position: relative;
+    height: 300px;
+    text-align: center;
+}
+
+.addon2 h1{
+    position: absolute;
+    font-size: 250px;
+    top: 0;
+    color: rgb(225, 225, 225);
+    font-weight: 700;
+    font-family: 'Trispace', sans-serif;
+}
+
+.addon2 .wrapper{
+    --color: #1f242d;
+    --color-invert: #ffffff;
+    --clip-path: circle(15px at left);
+    --clip-path-hover: circle(70px at left);
+    --clip-path-clicked: circle(100vw at left);
+    --duration: 0.4s;
+    --timing-function: ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.addon2 .wrapper .video{
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    clip-path: var(--clip-path);
+    transition: clip-path var(--duration) var(--timing-function);
+}
+
+.addon2 .video video{
+    position: fixed;
+    background: #c4cbde;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.addon2 .wrapper .text{
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    opacity: var(--opacity, 1);
+    transition: opacity 0.3s var(--timing-function) 0.2s;
+}
+
+.addon2 .wrapper .text::before, .addon2 .wrapper .text::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    left: -1px;
+    right: 25px;
+}
+
+.addon2 .wrapper .text::before{
+    box-shadow: 26px 0 0 1px var(--color);
+    right: var(--r,100%);
+    opacity: var(--opacity,0);
+    transition: right 0.5s ease-in, opacity 0.1s linear;
+}
+
+.addon2 .wrapper .text::after{
+    box-shadow: 26px 0 0 1px var(--color-invert);
+    clip-path: var(--clip-path);
+    transition: clip-path var(--duration) var(--timing-function);
+}
+
+.addon2 .wrapper .text > span::before, .addon2 .wrapper .text > span::after{
+    content: attr(data-text);
+    padding-left: 26px;
+}
+
+.addon2 .wrapper .text > span::before{
+    color: var(--color);
+}
+
+.addon2 .wrapper .text > span::after{
+    color: var(--color-invert);
+    clip-path: var(--clip-path);
+    transition: clip-path var(--duration) var(--timing-function);
+    position: absolute;
+    left: 0;
+}
+
+.addon2 .wrapper input{
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 40px;
+    outline: none;
+    z-index: 2;
+    appearance: none;
+    cursor: pointer;
+}
+
+.addon2 .wrapper input:focus{
+    outline: none;
+}
+
+.addon2 .wrapper input:hover ~ .video{
+    clip-path: var(--clip-path-hover);
+}
+
+.addon2 .wrapper input:hover ~ .text::before{
+    --r: 25px;
+    --opacity: 1;
+}
+
+.addon2 .wrapper input:hover ~ .text::after{
+    clip-path: var(--clip-path-hover);
+}
+
+.addon2 .wrapper input:hover ~ .text > span:after{
+    clip-path: var(--clip-path-hover);
+}
+
+.addon2 .wrapper input:checked{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.addon2 .wrapper input:checked ~ .video{
+    clip-path: var(--clip-path-clicked);
+}
+
+.addon2 .wrapper input:checked ~ .text{
+    --opacity: 0;
+    transition: opacity 0.3s var(--timing-function);
+}
+
+.addon2 .wrapper input:checked ~ .text::after{
+    clip-path: var(--clip-path-clicked);
+}
+
+.addon2 .wrapper input:checked ~ .text > span::after{
+    clip-path: var(--clip-path-clicked);
+}
+
+
+/* ====================================================== Section 3 starts here ============================================= */
+
+.section3 .inside1 button:hover:not(.active){
+    background-color: rgb(242, 242, 242);
+}
+
+.section3 .inside2 img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* ===================================================== Section 4 starts here ================================================== */
+
+.section4{
+    background: linear-gradient(rgba(11, 7, 7, 0.7), rgba(2, 2, 2, 0.8)),url(../images/section\ 4\ bg.jpg) fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 4% 0 5% 0;
+}
+
+.section4 .carousel-indicators{
+    margin-bottom: -3.5rem;
+}
+
+.section4 .carousel-indicators button{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.section4 .titan2{
+    display: grid;
+    place-items: center;
+}
+
+.section4 .carousel .carousel-inner .titan2 h3{
+    color: white;
+    font-weight: 600;
+}
+
+.section4 .carousel .carousel-inner .titan2 p{
+    color: white;
+}
+
+.section4 img{
+    height: 500px;
+    object-fit: contain;
+}
+
+/* ========================================== section 5 starts here ========================================== */
+
+.section5 .first{
+    color: var(--blue);
+}
+
+.section5 .second{
+    border-left: 5px solid rgb(225, 225, 225);
+    border-right: 5px solid rgb(225, 225, 225);
+}
+
+/* ========================================== section 6 starts here ========================================== */
+
+.section6 .inside1
+{
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.section6 .card
+{
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 0 20px 20px rgba(0,0,0,.5);
+  transition: 1s;
+}
+.section6 .card:hover
+{
+  z-index: 100;
+  transform: perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+
+.section6 .card .Box
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  transform-origin: left;
+  z-index: 1;
+  transition: 1s cubic-bezier(.15,1.7,.84,.58);
+  background: #111;
+}
+.section6 .card .Box img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section6 .card:hover .Box
+{
+  transform: rotateY(-135deg);
+}
+.section6 .card .details
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: -1;
+}
+
+.section6 .inside1 .card span{
+    font-size: 14px;
+    color: var(--blue);
+    font-family: 'Trispace', sans-serif;
+}
+
+.section6 .inside1 h3{
+    font-weight: 600;
+}
+
+/* ========================================== section 7 starts here ========================================== */
+
+.section7 .slider-item{
+    width: 200px !important;
+}
+
+.section7 img{
+    padding: 0px 60px !important;
+    filter: drop-shadow(0px 8px 10px rgb(133, 133, 133));
+}
+
+
+/* ================================================== Section 8 starts here =============================================== */
+
+.section8 .nav-link{
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 15px;
+  }
+.section8 .nav-link:hover{
+    color: var(--blue);
+  }
+  
+.section8 .nav-pills .nav-link.active {
+    color: gray;
+    background-color: transparent;
+  }
+  
+.section8 .section3 .inside2 .ii{
+    overflow: hidden;
+  }
+  
+.section8 .inside2 img{
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    transition: all 1s;
+  }
+  
+.section8 .inside2 img:hover{
+    transform: scale(1.1) rotate(4deg);
+  }
+
+.section8 .ii{
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* =============================================================== FAQ section starts here ==================================================== */
+
+.faq {
+    background-color: #FFFBF7;
+}
+
+.faq .accordion-item {
+    border: 0.5px solid lightgrey !important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.faq .accordion-header button {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.faq .accordion-item {
+    border: 0.5px solid lightgrey !important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq .accordion-button:not(.collapsed) {
+    color: #FFF  !important;
+    background-color: var(--blue) !important;
+  }
+  
+  
+  
+.faq .accordion-button:focus {
+    border-color: #FFF !important;
+    box-shadow: 0 0 0 .25rem #FFF !important;
+  }
+
+.faq .inside2 img{
+    width: 80%;
+}
+
+/* ====================================================== Blog section starts here =============================================== */
+
+.blog .card img{
+    transition: 0.5s;
+}
+
+.blog .card:hover img{
+    transform: scale(1.2);
+}
+
+/* ====================================================== Footer section starts here ============================================= */
+.footer{
+    position: sticky;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.footer .inside1 p{
+    font-family: 'Trispace', sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.footer .inside2 ul li a{
+    color: white;
+}
+
+.footer .inside2 ul li a:hover{
+    color: var(--grey);
+}
+
+.footer .inside2 ul li {
+    margin: 10px;
+    padding: 0 0 0 20px;
+    list-style: none;
+}
+
+.footer .inside2 .image{
+    height: 150px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.footer .inside2 .image img{
+    width: 70%;
+}
+
+.footer .icons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .icons .circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: grid;
+    place-content: center;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+.footer .icons a{
+    color: white;
+}
+
+.footer .circle:hover{
+    background-color: #fff;
+    & a{
+        color: black;
+    }
+}
+
+
+
+
+
+
+/* ================================================== MEDIA QUERY HERE ============================================= */
+
+@media (max-width:2000px){
+    .section1 .inside2 img{
+        width: 125%;
+    }
+}
+@media (max-width:1490px){
+    .section1 .inside2 img{
+        width: 110%;
+    }
+}
+
+@media (max-width:1399px){
+
+    .section1 .inside1{
+        padding: 0 0 0 0;
+    }
+
+    .section1 .inside2 img{
+        width: 125%;
+    }
+}
+
+@media (max-width:1300px){
+    .section1 .inside2 img{
+        width: 110%;
+    }
+}
+
+@media(max-width:1199px){
+    .section1 .inside2 img{
+        width: 125%;
+    }
+
+    .section2 .inside2 img{
+        width: 90%;
+    }
+    .section2 .inside2 span{
+        font-size: 14px;
+    }
+    .section2 .inside2 h4{
+        font-size: 2.2rem;
+    }
+    .section2 .inside2 p{
+        font-size: 14px;
+    }
+
+    .faq .inside2 img{
+        width: 100%;
+    }
+}
+
+@media (max-width:1170px){
+    .section1 .inside2 img{
+        width: 125%;
+    }
+}
+
+@media (max-width:1070px){
+    .section1 .inside2 img{
+        width: 115%;
+    }
+}
+
+@media (max-width:991px){
+
+    .offcanvas{
+        background: rgba(255,255,255,.05);
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        backdrop-filter: blur(10px);
+    }
+
+    .addon2{
+        height: 220px;
+    }
+    .addon2 h1{
+        font-size: 200px;
+    }
+    
+    .section2 .inside1 img{
+        width: 70%;
+    }
+
+    .section3 .inside2 img{
+        width: 100%;
+    }
+
+    .section7 img{
+        padding: 0 20px !important;
+    }
+
+    .faq .inside2 img{
+        width: 70%;
+    }
+
+    .scrolled .navbar-nav a{
+        color: white;
+        transition: 0.8s;
+    }
+}
+
+@media (max-width:800px){
+
+    .addon2{
+        height: 180px;
+    }
+    .addon2 h1{
+        font-size: 150px;
+    }
+    .section4{
+        padding: 5% 0 60px 0;
+    }
+}
+
+@media (max-width:768px){
+
+    .preloader h1{
+        font-size: 70px;
+    }
+
+    .section5 .second{
+        border-left: none;
+        border-right: none;
+    }
+
+    .footer{
+        position: relative;
+    }
+}
+
+@media (max-width:576px){
+
+    .preloader h1{
+        font-size: 50px;
+    }
+
+    .heading{
+        padding: 20px 0;
+    }
+    .heading a{
+        font-size: 50px;
+    }
+    .heading a::before{
+        font-size: 16px;
+        letter-spacing: 25px;
+    }
+
+    .section1 .inside1 h1{
+        font-size: 1.2rem;
+    }
+    .section1 .inside1 h2{
+        font-size: 2.5rem;
+    }
+    .section1 .inside1 p{
+        font-size: 14px;
+    }
+
+    .section2 .inside1 img{
+        width: 100%;
+    }
+    .addon2{
+        height: 140px;
+    }
+    .addon2 h1{
+        font-size: 100px;
+        top: auto;
+    }
+
+    .section3 p{
+        font-size: 14px;
+    }
+
+    .section4 .carousel .carousel-inner .titan2 h3{
+        font-size: 20px;
+    }
+    .section4 .carousel .carousel-inner .titan2 p{
+        font-size: 14px;
+    }
+
+    .section7 img{
+        padding: 0 30px !important;
+    }
+
+    .faq .accordion-header button {
+        font-size: 14px;
+    }
+    .faq .accordion-body p {
+        font-size: 14px;
+    }
+    .faq .inside2 img{
+        width: 80%;
+    }
+
+    .footer .inside1 p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    .footer .inside2 .first img{
+        width: 50% !important;
+        text-align: start !important;
+    }
+}
+
+@media (max-width:420px){
+    .addon2{
+        height: 120px;
+    }
+    .addon2 h1{
+        font-size: 80px;
+        top: auto;
+    }
+}
+
+@media (max-width:350px){
+
+    .preloader h1{
+        font-size: 40px;
+    }
+
+    .heading a{
+        font-size: 35px;
+    }
+    .heading a::before{
+        font-size: 14px;
+        letter-spacing: 22px;
+    }
+
+    .section1 .inside1 p{
+        font-size: 12px;
+    }
+    .section1 .inside1 h2{
+        font-size: 2.2rem;
+    }
+    .section1 .inside1 a{
+        padding: 12px 25px;
+        font-size: 12px;
+    }
+
+    .section2 .inside2 span{
+        font-size: 12px;
+    }
+    .section2 .inside2 h4{
+        font-size: 1.5rem;
+    }
+    .section2 .inside2 p{
+        font-size: 12px;
+    }
+    .section2 .inside2 a {
+        font-size: 12px;
+    }
+
+    .section3 p{
+        font-size: 12px;
+    }
+
+    .section4 .carousel .carousel-inner .titan2 h3{
+        font-size: 16px;
+    }
+    .section4 .carousel .carousel-inner .titan2 p{
+        font-size: 12px;
+    }
+    .section4{
+        padding: 0 0 70px 0;
+    }
+
+    .faq .accordion-body p {
+        font-size: 12px;
+    }
+
+    .blog .card h5{
+        font-size: 16px;
+    }
+    .blog .card p{
+        font-size: 12px;
+    }
+    .footer .inside1 p, .inside2 a{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
